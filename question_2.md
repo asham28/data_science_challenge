@@ -52,4 +52,3 @@ ORDER BY
   UnitsSold DESC;
 ```
 > Answer: Product with ID 31, Gorgonzola Telino, had the most units sold in Germany.
-
