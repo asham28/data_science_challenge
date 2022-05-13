@@ -63,7 +63,7 @@ boxplot(aov$order_amount,
   ylab = "Order Amount"
 )
 ```
-![box_plot_order_amount_log_scale](plots/base_r/box_plot_order_amount_baseR.png)
+![box_plot_order_amount_baseR](plots/base_r/box_plot_order_amount_baseR.png)
 
 
 It's hard to tell much with this plot. Log transformation will be more helpful. 
@@ -74,7 +74,7 @@ boxplot(aov$order_amount, log = "y",
          main = "Order Amount Box Plot - Log Scale",
    ylab = "Order Amount (Log)")
 ```
-![box_plot_order_amount_log_scale](plots/base_r/box_plot_order_amount_log_scale_baseR.png)
+![box_plot_order_amount_log_scale_baseR](plots/base_r/box_plot_order_amount_log_scale_baseR.png)
 
 The boxplot shows the order amounts on the y-axis. It's obvious to see we have some outliers! It seems that some expensive orders are skewing the AOV to the higher end. Let's explore these orders more closely. 
 
@@ -88,7 +88,7 @@ plot(aov$shop_id, aov$order_amount,
   xlab = "Shop ID", ylab = "Order Amount"
 )
 ```
-![box_plot_order_amount_log_scale](plots/base_r/hist_order_amounts_by_shop_log_scale_baseR.png)
+![hist_order_amounts_by_shop_log_scale_baseR](plots/base_r/hist_order_amounts_by_shop_log_scale_baseR.png)
 
 There are definitely a couple stores with high order amounts, but we can't pinpoint exactly which ones with the graph. We'll put the information in a table instead.  
 
@@ -115,7 +115,7 @@ barplot(counts,
       main="Shop 42: Bar Plot",
      xlab="Order Amount")
 ```
-![box_plot_order_amount_log_scale](plots/base_r/box_plot_shop_42_baseR.png)
+![box_plot_shop_42_baseR](plots/base_r/box_plot_shop_42_baseR.png)
 
 The order values were so disparate that we needed to log transform the plot. It seems as though shop 42 is making many high-end sales. Which raises the question, what is the cost of one item at this store?
   
@@ -167,7 +167,7 @@ barplot(counts,
       main="Shop 78: Bar Plot",
      xlab="Order Amount")
 ```
-![box_plot_order_amount_log_scale](plots/base_r/box_plot_shop_78_baseR.png)
+![box_plot_shop_78_baseR](plots/base_r/box_plot_shop_78_baseR.png)
 
 
 mean, median, and mode for shop 78
