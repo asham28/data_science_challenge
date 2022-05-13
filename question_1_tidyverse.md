@@ -78,12 +78,12 @@ ggplot(aov, aes(order_amount)) +
   geom_boxplot() +
   scale_x_continuous(name="", labels = scales::comma, trans = 'log2') + 
   coord_flip() + 
-  labs(title = "Order Amount") + 
+  labs(title = "Box Plot: Order Amount") + 
   theme_am + 
   theme(axis.text.x = element_blank(), 
          axis.ticks.x = element_blank())
-    
 ```
+![Screenshot](box_plot_order_amount_log_scale.png)
 
 The boxplot shows the order amounts on the y-axis. It's obvious to see we have some outliers! It seems that some expensive orders are skewing the AOV to the higher end. Let's explore these orders more closely. 
 
@@ -98,6 +98,8 @@ ggplot(aov, aes(shop_id, order_amount)) +
   labs(title = "Histogram: Order Amount by Shop") + 
   theme_am 
 ```
+
+![Screenshot](hist_order_amounts_by_shop_log_scale.png)
 
 There are definitely a couple stores with high order amounts, but we can't pinpoint exactly which ones with the graph. We'll put the information in a table instead.  
 
@@ -128,7 +130,8 @@ ggplot(f2, aes(order_amount)) +
   labs(title = "Shop 42 Orders Amounts" ) + 
   theme_am
 ```
- 
+![Screenshot](hist_shop_42.png)
+
 The order values were so disparate that we needed to log transform the plot. It seems as though shop 42 is making many high-end sales. Which raises the question, what is the cost of one item at this store?
 
 average cost of shoes at stores not under investigation 
@@ -183,7 +186,7 @@ ggplot(f7, aes(order_amount)) +
   labs(title = "Shop 78 Orders Amounts" ) + 
   theme_am
 ```
-
+![Screenshot](hist_shop_78.png)
 
 ### mean, median, and mode for shop 78
 ```{r}
